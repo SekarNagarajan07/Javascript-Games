@@ -1,7 +1,4 @@
 const playBoard = document.querySelector(".play-board");
-const scoreElement = document.querySelector(".score");
-const highScoreElement = document.querySelector(".high-score");
-const controls = document.querySelector(".controls i");
 
 let foodX = 13,
   foodY = 10;
