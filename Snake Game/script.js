@@ -2,6 +2,8 @@ const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 
+const controls = document.querySelectorAll(".controls i");
+
 let gameOver = false;
 let foodX = 13,
   foodY = 10;
@@ -51,6 +53,13 @@ const changeDirection = (e) => {
     velocityY = 0;
   }
 };
+
+controls.forEach((button) => {
+  button.addEventListener("click", () =>
+    changeDirection({ key: button.dataset.key })
+  );
+});
+
 const initGame = () => {
   if (gameOver) return handleGameOver();
   let htmlMarkup = `<div class = "food" style = "grid-area: ${foodY} / ${foodX}"> </div>`;
