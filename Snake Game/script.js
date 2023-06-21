@@ -9,6 +9,8 @@ let snakeX = 5,
 let velocityX = 0,
   velocityY = 1;
 
+let snakeBody = [];
+
 const changeFoodPosition = () => {
   //passing a random 0 - 30 value as food position
   foodX = Math.floor(Math.random() * 30) + 1;
